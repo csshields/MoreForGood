@@ -35,7 +35,7 @@ module.exports = function(grunt) {
       sass: {
         dev: {
           src: ['src/*.scss'],
-          dest: 'css/styles.css',
+          dest: 'public/css/styles.css',
         },
 
       },
