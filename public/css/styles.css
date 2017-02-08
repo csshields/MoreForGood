@@ -3,3 +3,9 @@ body {
 
 header {
   margin-top: 50px; }
+
+section {
+  margin-bottom: 40px; }
+
+.photo {
+  border-radius: 50%; }
