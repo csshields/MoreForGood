@@ -1,9 +1,15 @@
-body{ background-color:white; }
+$primaryColor : #3aa2bc;
+$secondaryColor : #d1ab24;
+$textColor : #29423f;
+
+body{ background-color:white; color:$textColor; }
 header{ margin-top:50px; }
 
-section{margin-bottom:40px;}
-.welcome{}
-.work{}
+h4,h5 { color:$primaryColor;}
+section{padding-bottom:40px;}
+
+.welcome{ box-shadow: 0 0 3px 2px rgba(0,0,0,.1); }
+.work{ background-image: url('../img/paper.jpg'); padding-top: 40px;}
 .clients{}
 
 .photo{border-radius:50%;}
