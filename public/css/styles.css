@@ -45,14 +45,29 @@ header {
 h4, h5 {
   color: #3aa2bc; }
 
+.work .row {
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 2s;
+  /* Internet Explorer */
+  -o-animation: fadein 2s;
+  /* Opera < 12.1 */
+  animation: fadein 2s; }
+
 section {
   padding-bottom: 40px; }
 
 .welcome {
-  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+  background-image: url("../img/shiplap.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0px 26px -2px grey; }
 
 .work {
-  background-image: url("../img/paper.jpg");
   padding-top: 40px; }
 
 .photo {

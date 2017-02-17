@@ -32,16 +32,29 @@ $textColor : #29423f;
 body{ background-color:white; color:$textColor; }
 header{ 
 	margin-top:50px; 
-	img {
-		@include fadesIn;
-    }
+	img { @include fadesIn; }
 }
 
 h4,h5 { color:$primaryColor;}
+.work .row {
+
+	// -webkit-animation-delay: 200s; Safari 4.0 - 8.0
+	// animation-delay: 200s;
+	@include fadesIn; 
+	
+}
 section{padding-bottom:40px;}
 
-.welcome{ box-shadow: 0 0 3px 2px rgba(0,0,0,.1); }
-.work{ background-image: url('../img/paper.jpg'); padding-top: 40px;}
+.welcome{ 
+	box-shadow: 0 0 3px 2px rgba(0,0,0,.1); 
+	background-image: url('../img/shiplap.gif');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 0 0px 26px -2px grey;
+
+}
+.work{ padding-top: 40px;}
 .clients{}
 
 .photo{border-radius:50%;}
