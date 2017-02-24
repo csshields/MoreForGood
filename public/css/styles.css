@@ -29,6 +29,10 @@ body {
   background-color: white;
   color: #29423f; }
 
+h5 {
+  color: #9733EE;
+  font-family: 'Open Sans',sans-serif; }
+
 header {
   margin-top: 50px; }
   header img {
@@ -40,64 +44,57 @@ header {
     /* Internet Explorer */
     -o-animation: fadein 2s;
     /* Opera < 12.1 */
-    animation: fadein 2s; }
+    animation: fadein 2s;
+    margin-bottom: 50px; }
 
-#devices {
+section {
+  padding-bottom: 40px; }
+
+.background {
+  height: 400px;
+  left: 0;
+  top: 300px;
+  right: 0;
+  transform: skewY(-10deg);
   position: absolute;
-  top: 0;
-  left: 0; }
-  #devices .phone {
-    background-image: url(../img/phone.png);
-    height: 148px;
-    width: 87px;
-    margin-right: 50px;
-    margin-bottom: 30px;
-    background-repeat: no-repeat; }
-  #devices .pencil {
-    background-image: url(../img/pencil.png);
-    height: 112px;
-    width: 100px;
-    background-repeat: no-repeat; }
-  #devices .laptop {
-    background-image: url(../img/laptop.png);
-    height: 298px;
-    width: 545px;
-    margin-right: 50px;
-    background-repeat: no-repeat; }
-  #devices .tablet {
-    background-image: url(../img/tablet.png);
-    height: 241px;
-    width: 321px;
-    background-repeat: no-repeat; }
-  #devices .report {
-    background-image: url(../img/report.png);
-    height: 242px;
-    width: 246px;
-    background-repeat: no-repeat; }
-  #devices .coffee {
-    background-image: url(../img/coffee.png);
-    height: 124px;
-    width: 117px;
-    background-repeat: no-repeat; }
+  background: #DA22FF;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom right, #DA22FF, #9733EE);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom right, #DA22FF, #9733EE);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
-.flexContainer {
-  display: -webkit-flex;
-  display: flex;
-  width: 100%;
-  -ms-transform: rotate(-12deg);
-  /* IE 9 */
-  -webkit-transform: rotate(-12deg);
-  /* Chrome, Safari, Opera */
-  transform: rotate(-12deg);
-  transform-origin: 100% 0; }
+.laptop {
+  background-image: url("../../laptop.png"); }
 
-.top {
-  justify-content: flex-end; }
+.welcome {
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 2s;
+  /* Internet Explorer */
+  -o-animation: fadein 2s;
+  /* Opera < 12.1 */
+  animation: fadein 2s;
+  padding-bottom: 145px; }
 
-h4, h5 {
-  color: #3aa2bc; }
+.work {
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 2s;
+  /* Internet Explorer */
+  -o-animation: fadein 2s;
+  /* Opera < 12.1 */
+  animation: fadein 2s;
+  color: white;
+  padding-bottom: 165px; }
+  .work h5 {
+    color: white; }
 
-.work .row {
+.clients {
   -webkit-animation: fadein 2s;
   /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s;
@@ -107,20 +104,6 @@ h4, h5 {
   -o-animation: fadein 2s;
   /* Opera < 12.1 */
   animation: fadein 2s; }
-
-section {
-  padding-bottom: 40px; }
-
-.welcome {
-  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
-  background-image: url("../img/shiplap.gif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0 0px 26px -2px grey; }
-
-.work {
-  padding-top: 40px; }
 
 .photo {
   border-radius: 50%; }
