@@ -32,14 +32,12 @@ $gradient2 : $primaryColor;
 
 body{ background-color:white; color:$textColor; }
 h5 { color:$gradient2; font-family: 'Open Sans',sans-serif;}
-header{ 
-	margin-top:50px; 
-	img { @include fadesIn; margin-bottom:50px;}
-}
+header{ margin-top:50px;}
+img { @include fadesIn; margin-bottom:50px;}
 section{padding-bottom:40px;}
 
 .background{	
-	height:400px;
+	height:500px;
 	left: 0;
 	top:300px;
 	right: 0;
@@ -50,20 +48,28 @@ section{padding-bottom:40px;}
 	background: linear-gradient(to bottom right, $gradient1 , $gradient2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.laptop{ background-image: url('../../laptop.png')}
+// .laptop {
+//     background-image: url(../img/laptop.png);
+//     height: 298px;
+//     width: 545px;
+//     margin-right: 50px;
+// 	background-repeat: no-repeat; 
+// }
 
 .welcome{
 	@include fadesIn; 
-	padding-bottom:145px;
+	padding-bottom:180px;
 }
 .work{
 	 @include fadesIn; 
 	 color:white;
-	 padding-bottom:165px;
+	 padding-bottom:270px;
 	h5{color:white;}
 }
 .clients{
-	 @include fadesIn; 
+	 @include fadesIn;
+	 padding-bottom:70px; 
 }
+footer{ padding-bottom:30px; }
 
 .photo{border-radius:50%;}
