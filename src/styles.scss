@@ -1,8 +1,10 @@
 $primaryColor : #9733EE;
 $secondaryColor : #d1ab24;
 $textColor : #29423f;
-$gradient1 : #DA22FF;
-$gradient2 : $primaryColor;
+$gradient1 : #895cf2;
+$gradient2 : #ffabf4;
+$bgColor: #f0eff4;
+
 
 @mixin fadesIn(){
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -30,8 +32,8 @@ $gradient2 : $primaryColor;
 
 
 
-body{ background-color:white; color:$textColor; }
-h5 { color:$gradient2; font-family: 'Open Sans',sans-serif;}
+body{ background-color:white; color:$textColor; background-color: $bgColor;}
+h5 { color:$primaryColor; font-family: 'Open Sans',sans-serif;}
 header{ margin-top:50px;}
 img { @include fadesIn; margin-bottom:50px;}
 section{padding-bottom:40px;}
@@ -39,7 +41,7 @@ section{padding-bottom:40px;}
 .background{	
 	height:500px;
 	left: 0;
-	top:300px;
+	top:400px;
 	right: 0;
 	transform: skewY(-10deg);
 	position: absolute;
@@ -57,14 +59,21 @@ section{padding-bottom:40px;}
 // }
 
 .welcome{
-	@include fadesIn; 
-	padding-bottom:180px;
+	padding-bottom:270px;
+	background-image: url(../img/girl3.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+
+	section{ @include fadesIn; }
+
 }
 .work{
-	 @include fadesIn; 
+	
 	 color:white;
 	 padding-bottom:270px;
+
 	h5{color:white;}
+	section{ @include fadesIn; }
 }
 .clients{
 	 @include fadesIn;

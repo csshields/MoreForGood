@@ -27,7 +27,8 @@
 
 body {
   background-color: white;
-  color: #29423f; }
+  color: #29423f;
+  background-color: #f0eff4; }
 
 h5 {
   color: #9733EE;
@@ -54,43 +55,48 @@ section {
 .background {
   height: 500px;
   left: 0;
-  top: 300px;
+  top: 400px;
   right: 0;
   transform: skewY(-10deg);
   position: absolute;
-  background: #DA22FF;
+  background: #895cf2;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom right, #DA22FF, #9733EE);
+  background: -webkit-linear-gradient(to bottom right, #895cf2, #ffabf4);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom right, #DA22FF, #9733EE);
+  background: linear-gradient(to bottom right, #895cf2, #ffabf4);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 .welcome {
-  -webkit-animation: fadein 2s;
-  /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s;
-  /* Firefox < 16 */
-  -ms-animation: fadein 2s;
-  /* Internet Explorer */
-  -o-animation: fadein 2s;
-  /* Opera < 12.1 */
-  animation: fadein 2s;
-  padding-bottom: 180px; }
+  padding-bottom: 270px;
+  background-image: url(../img/girl3.jpg);
+  background-repeat: no-repeat;
+  background-position: right; }
+  .welcome section {
+    -webkit-animation: fadein 2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2s;
+    /* Internet Explorer */
+    -o-animation: fadein 2s;
+    /* Opera < 12.1 */
+    animation: fadein 2s; }
 
 .work {
-  -webkit-animation: fadein 2s;
-  /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s;
-  /* Firefox < 16 */
-  -ms-animation: fadein 2s;
-  /* Internet Explorer */
-  -o-animation: fadein 2s;
-  /* Opera < 12.1 */
-  animation: fadein 2s;
   color: white;
   padding-bottom: 270px; }
   .work h5 {
     color: white; }
+  .work section {
+    -webkit-animation: fadein 2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2s;
+    /* Internet Explorer */
+    -o-animation: fadein 2s;
+    /* Opera < 12.1 */
+    animation: fadein 2s; }
 
 .clients {
   -webkit-animation: fadein 2s;
