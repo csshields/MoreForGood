@@ -33,23 +33,29 @@ module.exports = function(grunt) {
       },
 
       sass: {
-        dev: {
-          src: ['src/*.scss'],
-          dest: 'public/css/styles.css',
-        },
+          dist: {                            // Target
+            options: {                       // Target options
+              style: 'expanded',
+              loadPath: ['node_modules/foundation-sites/scss']
+            },
+            files: {                         // Dictionary of files
+              'public/css/styles.css': 'src/styles.scss',       // 'destination': 'source'
+            }
+          }
 
       },
 
   });
 
   // Load the Grunt plugins.
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-sass');
+  
 
 
   // Register the default tasks.
-  grunt.registerTask('default', ['watch', 'jshint', 'sass']);
+  grunt.registerTask('default', ['watch', 'sass']);
 
 };
