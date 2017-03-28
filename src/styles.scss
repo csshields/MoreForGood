@@ -10,9 +10,14 @@
 $primaryColor : #033A23;
 $primaryColorLight : #049E74;
 $secondaryColor : #3FB2DC;
+
+$primaryColorRBGa : rgba(3, 58, 35, 0.7);
+$secondaryRGBa : rgba(63, 178, 220, 0.7); //
+$primaryColorLightRGBa : rgba(4, 158, 116, 0.7);
+
 $textColor : #29423f;
-$gradient1 : $secondaryColor;
-$gradient2 : $primaryColorLight;
+$gradient1 : $secondaryRGBa;
+$gradient2 : $primaryColorLightRGBa;
 $bgColor: #fff;
 $gray: #F7F6F6;
 
@@ -42,8 +47,10 @@ $gray: #F7F6F6;
 
 
 body{ color:$textColor; background-color: $bgColor; font-family:'Lato',sans-serif; }
-h2 { color:$primaryColor; font-family: 'Poppins',sans-serif; font-size:16px; 
-	font-weight:200; letter-spacing: 1px; margin-bottom:40px}
+h2 { color:$primaryColor; font-family: 'Poppins',sans-serif; font-size:18px; 
+	letter-spacing: 1px; margin-bottom:60px; color:white;
+	line-height:26px; @include fadesIn;
+}
 h3 { font-size:32px; color:$primaryColor; font-weight:200; font-family:'Courgette',sans-serif; margin:0; }
 h4 { font-size:22px; color:$primaryColorLight; font-weight:200; margin-top:0; }
 h5 { margin:0; font-size:20px; font-weight:200; color:$primaryColorLight;}
@@ -53,9 +60,9 @@ a { color:$secondaryColor;}
 section{padding:20px; margin-bottom:20px }
 
 .about{ background-color:$gray; }
-.clients {}
 
-.border{ border :solid 2px #f0f0f0; margin:30px; padding:20px;
+.border{ 
+	// border :solid 2px #f0f0f0; margin:30px; padding:20px;
 	background-image: url(../img/leafBG.png); background-repeat: no-repeat; 
 	background-position: 70% 40px; background-color: white; 
 }
@@ -63,17 +70,17 @@ section{padding:20px; margin-bottom:20px }
 	.border{ border-left:solid 0 #f0f0f0; border-right:solid 0 #f0f0f0;}
 }
 
-.background{	
-	height:500px;
-	left: 0;
-	top:400px;
-	right: 0;
-	transform: skewY(-10deg);
-	position: absolute;
-	background: $gradient1; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to bottom right, $gradient1 , $gradient2); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to bottom right, $gradient1 , $gradient2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+// .background{	
+// 	height:500px;
+// 	left: 0;
+// 	top:400px;
+// 	right: 0;
+// 	transform: skewY(-10deg);
+// 	position: absolute;
+// 	background: $gradient1; /* fallback for old browsers */
+// 	background: -webkit-linear-gradient(to bottom right, $gradient1 , $gradient2); /* Chrome 10-25, Safari 5.1-6 */
+// 	background: linear-gradient(to bottom right, $gradient1 , $gradient2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+// }
 
 // .laptop {
 //     background-image: url(../img/laptop.png);
@@ -83,15 +90,40 @@ section{padding:20px; margin-bottom:20px }
 // 	background-repeat: no-repeat; 
 // }
 
+
+header{ 
+	text-align: center;
+	padding:80px 0 50px ;
+	img{ @include fadesIn; margin-bottom:50px; width:300px; height:60px; margin:0;}
+}
+
 .welcome{
 	text-align:center;
+	background-image: url(../img/desk.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	height:450px;
+	padding:0;
+	margin-top:40px;
 
-	header{ 
-		margin-top:50px;
-		img{ @include fadesIn; margin-bottom:50px; width:300px; height:40px;}
+	.welcomeBG{ width:100%; height:100%;
+		background: $gradient1; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to bottom right, $gradient1 , $gradient2); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to bottom right, $gradient1 , $gradient2);
 	}
 
 }
+
+nav{
+	text-align: center; padding:5px; position:fixed; top:0; width:100%; background-color: white;
+	a{ color:$secondaryColor; text-transform: uppercase; text-decoration: none; 
+	margin:0 20px; display: inline-block; padding:10px;}
+	a:hover {background-color: $gray}
+	a img{height:24px; vertical-align: middle; margin-right:-16px;}
+	a:first-child:hover {background-color:transparent;}
+}
+
 
 .work{
 	section{ @include fadesIn; }
@@ -102,6 +134,15 @@ section{padding:20px; margin-bottom:20px }
 	 padding-bottom:70px; 
 }
 
+.contact{
+	width:100%; background-color: $secondaryColor; height: 300px; color:white;
+	margin-bottom: 0px;
+	a , h3{color:white}
+			background: $gradient1; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to bottom right, $gradient1 , $gradient2); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to bottom right, $gradient1 , $gradient2);
+}
+
 footer{ padding-bottom:30px; }
 
 .photo{border-radius:50%;}
@@ -110,6 +151,8 @@ footer{ padding-bottom:30px; }
 ::selection { background: #FED500; }
 ::-moz-selection { background: #FED500; }
 
-.flowers{ background-image: url(../img/flowers.png); background-repeat: repeat-x; 
-	background-position: center center; width:100%; height:50px; background-size:cover;
-    background-size: 35%; }
+.flowers{
+	width:30%; margin:auto; 	
+	img{ width:100%; height:100%;}
+}
+

@@ -1219,10 +1219,20 @@ body {
 h2 {
   color: #033A23;
   font-family: 'Poppins',sans-serif;
-  font-size: 16px;
-  font-weight: 200;
+  font-size: 18px;
   letter-spacing: 1px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  color: white;
+  line-height: 26px;
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 2s;
+  /* Internet Explorer */
+  -o-animation: fadein 2s;
+  /* Opera < 12.1 */
+  animation: fadein 2s;
 }
 
 h3 {
@@ -1265,9 +1275,6 @@ section {
 }
 
 .border {
-  border: solid 2px #f0f0f0;
-  margin: 30px;
-  padding: 20px;
   background-image: url(../img/leafBG.png);
   background-repeat: no-repeat;
   background-position: 70% 40px;
@@ -1280,28 +1287,11 @@ section {
     border-right: solid 0 #f0f0f0;
   }
 }
-.background {
-  height: 500px;
-  left: 0;
-  top: 400px;
-  right: 0;
-  transform: skewY(-10deg);
-  position: absolute;
-  background: #3FB2DC;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom right, #3FB2DC, #049E74);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom right, #3FB2DC, #049E74);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.welcome {
+header {
   text-align: center;
+  padding: 80px 0 50px;
 }
-.welcome header {
-  margin-top: 50px;
-}
-.welcome header img {
+header img {
   -webkit-animation: fadein 2s;
   /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s;
@@ -1313,7 +1303,56 @@ section {
   animation: fadein 2s;
   margin-bottom: 50px;
   width: 300px;
-  height: 40px;
+  height: 60px;
+  margin: 0;
+}
+
+.welcome {
+  text-align: center;
+  background-image: url(../img/desk.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 450px;
+  padding: 0;
+  margin-top: 40px;
+}
+.welcome .welcomeBG {
+  width: 100%;
+  height: 100%;
+  background: rgba(63, 178, 220, 0.7);
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom right, rgba(63, 178, 220, 0.7), rgba(4, 158, 116, 0.7));
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom right, rgba(63, 178, 220, 0.7), rgba(4, 158, 116, 0.7));
+}
+
+nav {
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+}
+nav a {
+  color: #3FB2DC;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 20px;
+  display: inline-block;
+  padding: 10px;
+}
+nav a:hover {
+  background-color: #F7F6F6;
+}
+nav a img {
+  height: 24px;
+  vertical-align: middle;
+  margin-right: -16px;
+}
+nav a:first-child:hover {
+  background-color: transparent;
 }
 
 .work section {
@@ -1341,6 +1380,22 @@ section {
   padding-bottom: 70px;
 }
 
+.contact {
+  width: 100%;
+  background-color: #3FB2DC;
+  height: 300px;
+  color: white;
+  margin-bottom: 0px;
+  background: rgba(63, 178, 220, 0.7);
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom right, rgba(63, 178, 220, 0.7), rgba(4, 158, 116, 0.7));
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom right, rgba(63, 178, 220, 0.7), rgba(4, 158, 116, 0.7));
+}
+.contact a, .contact h3 {
+  color: white;
+}
+
 footer {
   padding-bottom: 30px;
 }
@@ -1358,13 +1413,12 @@ footer {
 }
 
 .flowers {
-  background-image: url(../img/flowers.png);
-  background-repeat: repeat-x;
-  background-position: center center;
+  width: 30%;
+  margin: auto;
+}
+.flowers img {
   width: 100%;
-  height: 50px;
-  background-size: cover;
-  background-size: 35%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
