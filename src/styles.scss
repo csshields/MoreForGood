@@ -10,14 +10,16 @@
 $primaryColor : #033A23;
 $primaryColorLight : #049E74;
 $secondaryColor : #3FB2DC;
-
+$highlightColor: #FED500;
 $primaryColorRBGa : rgba(3, 58, 35, 0.7);
 $secondaryRGBa : rgba(63, 178, 220, 0.7); //
 $primaryColorLightRGBa : rgba(4, 158, 116, 0.7);
 
 $textColor : #29423f;
-$gradient1 : $secondaryRGBa;
+
+$gradient1 : $secondaryColor;
 $gradient2 : $primaryColorLightRGBa;
+
 $bgColor: #fff;
 $gray: #F7F6F6;
 
@@ -44,12 +46,17 @@ $gray: #F7F6F6;
     from { opacity:0; }
     to { opacity:1; }
 }
-
+@mixin gradient {
+	background: $gradient1; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom right, $gradient1 , $gradient2); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom right, $gradient1 , $gradient2);
+}
 
 body{ color:$textColor; background-color: $bgColor; font-family:'Lato',sans-serif; }
 h2 { color:$primaryColor; font-family: 'Poppins',sans-serif; font-size:18px; 
 	letter-spacing: 1px; margin-bottom:60px; color:white;
 	line-height:26px; @include fadesIn;
+	text-shadow: 2px 2px #000;
 }
 h3 { font-size:32px; color:$primaryColor; font-weight:200; font-family:'Courgette',sans-serif; margin:0; }
 h4 { font-size:22px; color:$primaryColorLight; font-weight:200; margin-top:0; }
@@ -57,7 +64,7 @@ h5 { margin:0; font-size:20px; font-weight:200; color:$primaryColorLight;}
 p {line-height: 1.4rem}
 a { color:$secondaryColor;}
 
-section{padding:20px; margin-bottom:20px }
+section{padding:20px; margin-bottom:20px;box-sizing: border-box; }
 
 .about{ background-color:$gray; }
 
@@ -103,20 +110,21 @@ header{
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
-	height:450px;
+	height:500px;
 	padding:0;
 	margin-top:40px;
 
 	.welcomeBG{ width:100%; height:100%;
-		background: $gradient1; /* fallback for old browsers */
-		background: -webkit-linear-gradient(to bottom right, $gradient1 , $gradient2); /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(to bottom right, $gradient1 , $gradient2);
+
+		// background: $gradient1; /* fallback for old browsers */
+		// background: -webkit-linear-gradient(to bottom right, $gradient1 , $gradient2); /* Chrome 10-25, Safari 5.1-6 */
+		// background: linear-gradient(to bottom right, $gradient1 , $gradient2);
 	}
 
 }
 
 nav{
-	text-align: center; padding:5px; position:fixed; top:0; width:100%; background-color: white;
+	text-align: center; padding:0; position:fixed; top:0; width:100%; background-color: white;
 	a{ color:$secondaryColor; text-transform: uppercase; text-decoration: none; 
 	margin:0 20px; display: inline-block; padding:10px;}
 	a:hover {background-color: $gray}
@@ -138,9 +146,8 @@ nav{
 	width:100%; background-color: $secondaryColor; height: 300px; color:white;
 	margin-bottom: 0px;
 	a , h3{color:white}
-			background: $gradient1; /* fallback for old browsers */
-		background: -webkit-linear-gradient(to bottom right, $gradient1 , $gradient2); /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(to bottom right, $gradient1 , $gradient2);
+	@include gradient;
+
 }
 
 footer{ padding-bottom:30px; }

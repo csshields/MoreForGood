@@ -1233,6 +1233,7 @@ h2 {
   -o-animation: fadein 2s;
   /* Opera < 12.1 */
   animation: fadein 2s;
+  text-shadow: 2px 2px #000;
 }
 
 h3 {
@@ -1268,6 +1269,7 @@ a {
 section {
   padding: 20px;
   margin-bottom: 20px;
+  box-sizing: border-box;
 }
 
 .about {
@@ -1313,23 +1315,18 @@ header img {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  height: 450px;
+  height: 500px;
   padding: 0;
   margin-top: 40px;
 }
 .welcome .welcomeBG {
   width: 100%;
   height: 100%;
-  background: rgba(63, 178, 220, 0.7);
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom right, rgba(63, 178, 220, 0.7), rgba(4, 158, 116, 0.7));
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom right, rgba(63, 178, 220, 0.7), rgba(4, 158, 116, 0.7));
 }
 
 nav {
   text-align: center;
-  padding: 5px;
+  padding: 0;
   position: fixed;
   top: 0;
   width: 100%;
@@ -1386,11 +1383,11 @@ nav a:first-child:hover {
   height: 300px;
   color: white;
   margin-bottom: 0px;
-  background: rgba(63, 178, 220, 0.7);
+  background: #3FB2DC;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom right, rgba(63, 178, 220, 0.7), rgba(4, 158, 116, 0.7));
+  background: -webkit-linear-gradient(to bottom right, #3FB2DC, rgba(4, 158, 116, 0.7));
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom right, rgba(63, 178, 220, 0.7), rgba(4, 158, 116, 0.7));
+  background: linear-gradient(to bottom right, #3FB2DC, rgba(4, 158, 116, 0.7));
 }
 .contact a, .contact h3 {
   color: white;
