@@ -98,38 +98,45 @@ section{padding:20px; margin-bottom:20px;box-sizing: border-box; }
 // }
 
 
-header{ 
-	text-align: center;
-	padding:80px 0 50px ;
-	img{ @include fadesIn; margin-bottom:50px; width:300px; height:60px; margin:0;}
+header{
+	position:fixed; top:0; width:100%;
+
+	nav{
+		text-align: right; padding:0; width:100%; background-color: white;
+		a{ 
+			color:$secondaryColor; text-decoration: none; 
+			margin: 10px; 
+			padding:10px;
+			display: inline-block; 
+		}
+		a:hover { text-decoration: underline; }
+		a img{height:24px; vertical-align: middle; margin-right:-16px;}
+	}
+	.logo{ width:75px; float:left; position: absolute; top:5px; left:20px;}
 }
+
+
+
 
 .welcome{
 	text-align:center;
-	background-image: url(../img/desk.jpg);
+	background-image: url(../img/desk_xlarge.jpg);
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
 	height:500px;
 	padding:0;
-	margin-top:40px;
+	margin-top:44px;
 
 	.welcomeBG{ width:100%; height:100%;
+		div{ 
+			text-align: center;
+			padding:80px 0 50px ;
+			img{ @include fadesIn; margin-bottom:50px; width:300px; height:60px; margin:0;}
+		}
 
-		// background: $gradient1; /* fallback for old browsers */
-		// background: -webkit-linear-gradient(to bottom right, $gradient1 , $gradient2); /* Chrome 10-25, Safari 5.1-6 */
-		// background: linear-gradient(to bottom right, $gradient1 , $gradient2);
 	}
 
-}
-
-nav{
-	text-align: center; padding:0; position:fixed; top:0; width:100%; background-color: white;
-	a{ color:$secondaryColor; text-transform: uppercase; text-decoration: none; 
-	margin:0 20px; display: inline-block; padding:10px;}
-	a:hover {background-color: $gray}
-	a img{height:24px; vertical-align: middle; margin-right:-16px;}
-	a:first-child:hover {background-color:transparent;}
 }
 
 
@@ -153,7 +160,6 @@ nav{
 footer{ padding-bottom:30px; }
 
 .photo{border-radius:50%;}
-
 
 ::selection { background: #FED500; }
 ::-moz-selection { background: #FED500; }
