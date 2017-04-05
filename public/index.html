@@ -7,6 +7,10 @@
   	<title>More For Good</title>
   	<meta name="description" content="More for Good. We help nonprofits and values based organizations do what they are passionate about.">
 	<meta name="author" content="More for Good">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="white">
 
   	<link rel="stylesheet" href="css/normalize.css">
   	<link rel="stylesheet" href="css/styles.css?v=1.0">
@@ -30,6 +34,7 @@
 				<a href="#clients">Clients</a>
 				<a href="#contact">Contact Us</a>
 			</nav>
+			<div id="mobileMenu">Menu</div>
 		</header>
 
 		<section class="welcome">
@@ -97,7 +102,7 @@
 
 				done, she enjoys spending time with her family, hiking on the many local trails, making music and baking.
 
-				baking.
+				
 			</p>
 		</section>
 
@@ -109,6 +114,7 @@
 			<div class="row">
 				<div class="columns">Tree of Hope Haiti</div>
 				<div class="columns">LifeSource Fellowship</div>
+				<div id="css"></div>
 			</div>
 		</section>
 
@@ -132,6 +138,15 @@
 
 
 	</div>
+
+
+	<script type="text/javascript">
+		var header = document.getElementsByTagName("header")[0];
+		document.getElementById('mobileMenu').onclick = function(e){
+			header.className = (header.className) ? '' : 'extended';
+		}
+
+	</script>
 
 </body>
 </html>

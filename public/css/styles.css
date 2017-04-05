@@ -1210,6 +1210,10 @@
     opacity: 1;
   }
 }
+html, body {
+  height: 100%;
+}
+
 body {
   color: #29423f;
   background-color: #fff;
@@ -1324,11 +1328,14 @@ header .logo {
 }
 
 .welcome {
+  background-position-x: 50%;
+  background-position-y: 0%;
   text-align: center;
   background-image: url(../img/desk_medium.jpg);
-  background-position: center;
-  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   height: 500px;
   padding: 0;
   margin-top: 44px;
@@ -1359,6 +1366,7 @@ header .logo {
 @media screen and (min-width: 64em) {
   .welcome {
     background-image: url(../img/desk_large.jpg);
+    height: 500px;
   }
 }
 @media screen and (min-width: 75em) {
@@ -1367,6 +1375,66 @@ header .logo {
   }
 }
 
+#mobileMenu {
+  display: none;
+}
+
+@media screen and (max-width: 39.9375em) {
+  #mobileMenu {
+    cursor: pointer;
+    display: block;
+    color: white;
+    padding: 15px;
+    border-bottom: solid 1px white;
+    text-align: center;
+  }
+
+  h2 {
+    text-shadow: none;
+  }
+
+  header {
+    position: absolute;
+  }
+  header nav {
+    background-color: transparent;
+    display: none;
+  }
+  header .logo {
+    display: none;
+  }
+  header nav a {
+    color: white;
+    margin: 0;
+  }
+
+  .welcome {
+    margin-top: 0;
+  }
+
+  .welcome .welcomeBG div img, .welcome h2 {
+    width: 70%;
+    margin: auto;
+  }
+
+  header.extended {
+    position: static;
+    float: left;
+  }
+  header.extended nav {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+  header.extended nav a {
+    display: block;
+  }
+  header.extended #mobileMenu {
+    border-top: solid 1px white;
+    margin-bottom: 28px;
+    margin-top: 10px;
+  }
+}
 .work section {
   -webkit-animation: fadein 2s;
   /* Safari, Chrome and Opera > 12.1 */
