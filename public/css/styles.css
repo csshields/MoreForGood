@@ -1276,15 +1276,15 @@ section {
   box-sizing: border-box;
 }
 
-.about {
-  background-color: #F7F6F6;
-}
-
 .border {
   background-image: url(../img/leafBG.png);
   background-repeat: no-repeat;
   background-position: 70% 40px;
   background-color: white;
+}
+
+.anchor {
+  display: block;
 }
 
 @media screen and (max-width: 39.9375em) {
@@ -1297,6 +1297,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
 }
 header nav {
   text-align: right;
@@ -1377,6 +1378,7 @@ header .logo {
 
 #mobileMenu {
   display: none;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 39.9375em) {
@@ -1389,52 +1391,71 @@ header .logo {
     text-align: center;
   }
 
-  h2 {
-    text-shadow: none;
-  }
-
   header {
-    position: absolute;
+    position: static;
+    box-shadow: none;
+  }
+  header .outerNav {
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    background-clip: border-box;
+    -webkit-transition: max-height 0.3s;
+    -moz-transition: max-height 0.3s;
+    transition: max-height 0.3s;
+  }
+  header .wrapper {
+    visibility: hidden;
   }
   header nav {
     background-color: transparent;
-    display: none;
-  }
-  header .logo {
-    display: none;
+    text-align: center;
+    margin: auto;
   }
   header nav a {
     color: white;
     margin: 0;
+    display: block;
+  }
+  header .logo {
+    display: none;
   }
 
   .welcome {
     margin-top: 0;
+    background-attachment: scroll;
   }
 
   .welcome .welcomeBG div img, .welcome h2 {
-    width: 70%;
+    width: 80%;
     margin: auto;
+  }
+  .welcome .welcomeBG div {
+    padding: 50px 0 30px;
   }
 
-  header.extended {
-    position: static;
-    float: left;
+  header.extended .outerNav {
+    max-height: 1000px;
+    visibility: visible;
   }
-  header.extended nav {
-    display: block;
-    text-align: center;
-    margin: auto;
-  }
-  header.extended nav a {
-    display: block;
+  header.extended .wrapper {
+    visibility: visible;
   }
   header.extended #mobileMenu {
     border-top: solid 1px white;
-    margin-bottom: 28px;
     margin-top: 10px;
   }
 }
+.services {
+  margin: 100px 0;
+}
+
+.story {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #F7F6F6;
+}
+
 .work section {
   -webkit-animation: fadein 2s;
   /* Safari, Chrome and Opera > 12.1 */
@@ -1448,6 +1469,7 @@ header .logo {
 }
 
 .clients {
+  margin: 100px 0;
   -webkit-animation: fadein 2s;
   /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s;
@@ -1461,11 +1483,13 @@ header .logo {
 }
 
 .contact {
+  padding-top: 100px;
+  padding-bottom: 100px;
   width: 100%;
   background-color: #3FB2DC;
   height: 300px;
   color: white;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   background: #3FB2DC;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom right, #3FB2DC, rgba(4, 158, 116, 0.7));
