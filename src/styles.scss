@@ -23,6 +23,7 @@ $gradient2 : $primaryColorLightRGBa;
 $bgColor: #fff;
 $gray: #F7F6F6;
 
+
 @mixin fadesIn(){
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -60,7 +61,7 @@ h2 { color:$primaryColor; font-family: 'Poppins',sans-serif; font-size:18px;
 	line-height:26px; @include fadesIn;
 	text-shadow: 2px 2px #000;
 }
-h3 { font-size:32px; color:$primaryColor; font-weight:200; font-family:'Courgette',sans-serif; margin:0; }
+h3 { font-size:32px; color:$secondaryColor; font-weight:200; font-family:'Poppins',sans-serif; margin:0; }
 h4 { font-size:22px; color:$primaryColorLight; font-weight:200; margin-top:0; }
 h5 { margin:0; font-size:20px; font-weight:200; color:$primaryColorLight;}
 p {line-height: 1.4rem}
@@ -71,10 +72,18 @@ section{padding:20px; margin-bottom:20px;box-sizing: border-box; }
 
 .border{ 
 	// border :solid 2px #f0f0f0; margin:30px; padding:20px;
-	background-image: url(../img/leafBG.png); background-repeat: no-repeat; 
-	background-position: 70% 40px; background-color: white; 
+	// background-image: url(../img/leafBG.png); background-repeat: no-repeat; 
+	// background-position: 70% 40px; background-color: white; 
 }
+.rightBorder{ border-right: solid 1px gray;}
+
+.center{text-align: center;}
 .anchor{display:block}
+
+.grayBg{background-color:$gray;}
+.blueBg{@include gradient;	padding-top:100px; padding-bottom:100px;}
+
+
 @include breakpoint(small down){
 	.border{ border-left:solid 0 #f0f0f0; border-right:solid 0 #f0f0f0;}
 }
@@ -135,6 +144,7 @@ header{
 	height:500px;
 	padding:0;
 	margin-top:44px;
+	margin-bottom:0;
 
 	.welcomeBG{ 
 		width:100%; height:100%;
@@ -209,16 +219,32 @@ header{
 	}
 }
 
-
 .services{
+	
 	margin:100px 0;
+	h3{margin-bottom:40px;}
+	h4{margin-bottom:10px; text-align:center;}
+
+	.reportImg{	background-image: url(../img/reporting.svg);}
+	.marketingImg{background-image: url(../img/marketing.svg);}
+	.grantsImg{	background-image: url(../img/grants.svg); }
+	
+	.grantsImg, .reportImg, .marketingImg {
+		height:120px;
+		background-position: center top;
+		background-repeat: no-repeat; 
+		margin-bottom:30px;
+	}
+
+	@include breakpoint(small only) {
+		.grantsImg, .reportImg, .marketingImg { display: none; background-image: none;}
+	}
+	
 }
 
-.story{ 
-	padding-top:100px;
-	padding-bottom:100px;
-	background-color:$gray; 
-}
+
+
+.story{ padding-top:100px; padding-bottom:100px; }
 
 .work{
 	
@@ -243,12 +269,13 @@ header{
 	@include gradient;
 }
 
-footer{ padding-bottom:30px; }
+
+footer{ padding:30px 0; text-align: right;}
 
 .photo{border-radius:50%;}
 
-::selection { background: #FED500; }
-::-moz-selection { background: #FED500; }
+::selection { background: $highlightColor; }
+::-moz-selection { background: $highlightColor; }
 
 .flowers{
 	width:30%; margin:auto; 	

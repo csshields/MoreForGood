@@ -1242,9 +1242,9 @@ h2 {
 
 h3 {
   font-size: 32px;
-  color: #033A23;
+  color: #3FB2DC;
   font-weight: 200;
-  font-family: 'Courgette',sans-serif;
+  font-family: 'Poppins',sans-serif;
   margin: 0;
 }
 
@@ -1276,15 +1276,30 @@ section {
   box-sizing: border-box;
 }
 
-.border {
-  background-image: url(../img/leafBG.png);
-  background-repeat: no-repeat;
-  background-position: 70% 40px;
-  background-color: white;
+.rightBorder {
+  border-right: solid 1px gray;
+}
+
+.center {
+  text-align: center;
 }
 
 .anchor {
   display: block;
+}
+
+.grayBg {
+  background-color: #F7F6F6;
+}
+
+.blueBg {
+  background: #3FB2DC;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom right, #3FB2DC, rgba(4, 158, 116, 0.7));
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom right, #3FB2DC, rgba(4, 158, 116, 0.7));
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 @media screen and (max-width: 39.9375em) {
@@ -1340,6 +1355,7 @@ header .logo {
   height: 500px;
   padding: 0;
   margin-top: 44px;
+  margin-bottom: 0;
 }
 .welcome .welcomeBG {
   width: 100%;
@@ -1449,11 +1465,38 @@ header .logo {
 .services {
   margin: 100px 0;
 }
+.services h3 {
+  margin-bottom: 40px;
+}
+.services h4 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.services .reportImg {
+  background-image: url(../img/reporting.svg);
+}
+.services .marketingImg {
+  background-image: url(../img/marketing.svg);
+}
+.services .grantsImg {
+  background-image: url(../img/grants.svg);
+}
+.services .grantsImg, .services .reportImg, .services .marketingImg {
+  height: 120px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 39.9375em) {
+  .services .grantsImg, .services .reportImg, .services .marketingImg {
+    display: none;
+    background-image: none;
+  }
+}
 
 .story {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #F7F6F6;
 }
 
 .work section {
@@ -1501,7 +1544,8 @@ header .logo {
 }
 
 footer {
-  padding-bottom: 30px;
+  padding: 30px 0;
+  text-align: right;
 }
 
 .photo {
